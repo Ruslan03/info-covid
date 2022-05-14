@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UTS Pemrograman Web</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button {
+        flex-grow: 1;
+        flex-grow: 1;
+        margin: 0.5em 0;
+        padding: 0.5em;
+        background-color: #fff;
+        border: 1px solid #000;
+        border-radius: 4px;
+        min-width: 85px;
+        cursor: pointer;
+      }
+
+      select {
+        /* padding: 0.5em; */
+        margin: 0;
+      }
+
+      input,
+      select {
+        width: auto;
+        display: inline-block;
+        padding: 0.5em;
+        flex-grow: 1;
+      }
+
+      form {
+        margin: 0 auto;
+        width: 500px;
+        padding: 1em;
+        border-radius: 8px;
+        border: 1px solid #000;
+      }
+
+      table {
+        margin-bottom: 1em;
+      }
+
+      td:last-child {
+        padding: 0.5em;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="process.php" method="post">
+      <table width="100%">
+        <tr>
+          <td><label for="namaWilayah">Nama Wilayah</label></td>
+          <td>:</td>
+          <td>
+            <select name="namaWilayah" id="namaWilayah">
+              <option value="DKI Jakarta">DKI Jakarta</option>
+              <option value="Jawa Barat">Jawa Barat</option>
+              <option value="Banten">Banten</option>
+              <option value="Jawa Tengah">Jawa Tengah</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="jmlPositif">Jumlah Positif</label></td>
+          <td>:</td>
+          <td>
+            <input type="number" required name="jmlPositif" id="jmlPositif" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="jmlDirawat">Jumlah Dirawat</label></td>
+          <td>:</td>
+          <td>
+            <input type="number" required name="jmlDirawat" id="jmlDirawat" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="jmlSembuh">Jumlah Sembuh</label></td>
+          <td>:</td>
+          <td>
+            <input type="number" required name="jmlSembuh" id="jmlSembuh" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="jmlMeninggal">Jumlah Meninggal</label></td>
+          <td>:</td>
+          <td>
+            <input
+              type="number"
+              required
+              name="jmlMeninggal"
+              id="jmlMeninggal"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="namaOperator">Nama Operator</label></td>
+          <td>:</td>
+          <td>
+            <input type="text" required name="namaOperator" id="namaOperator" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="nim">NIM</label></td>
+          <td>:</td>
+          <td><input type="text" required name="nim" id="nim" /></td>
+        </tr>
+      </table>
+      <button style="flex-grow: 1" type="submit" name="simpan" value="1">
+        Simpan
+      </button>
+      <button style="flex-grow: 1" type="reset">Reset</button>
+    </form>
+  </body>
+</html>
